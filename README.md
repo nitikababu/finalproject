@@ -5,7 +5,7 @@ This project takes a Resnet 18 network that has been pretrained with  a large da
 ## Running this Project
 1. First download the necessary dataset by visiting the Kaggle webpage: https://www.kaggle.com/datasets/jorgebuenoperez/datacleaningglassesnoglasses. Click the “download” button to download the dataset. After downloading, unzip the dataset. This will put the images into two folders: “glasses” and “no_glasses.” 
 2. Now create 3 folders titled “test,” “train,” and “val.” Move about 80% of the images into the “train” folder, ensuring they are separated into “glasses” and “no_glasses” folders. Move about half of the remaining images into the “test” and “val” folders following the same process. Add images you want to test into the “test” folder (in jpg form). 
-3. Move these files into the python/training/classification/data folder of jetson-inference. 
+3. Move these files into the jetson-inference/python/training/classification/data folder in jetson nano. 
 4. In a terminal, in the jetson-inference directory, run the docker by running “./docker/run.sh”
 5. Change directories into jetson-inference/python/training/classification. Then run “python3 train.py --model-dir=models/glassvsnoglasses” to train the data. 
 6. Press ctrl+D in the docker terminal to exit docker. Confirm your directory is in jetson-inference/python/training/classification. Then set the locations of net and dataset by running “NET = models/glassvsnoglasses” and “DATASET = data/glasses_no_glasses” 
