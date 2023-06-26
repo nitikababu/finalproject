@@ -9,5 +9,5 @@ This project takes a Resnet 18 network that has been pretrained with  a large da
 4. In a terminal, in the jetson-inference directory, run the docker by running “./docker/run.sh”
 5. Change directories into jetson-inference/python/training/classification. Then run “python3 train.py --model-dir=models/glassvsnoglasses” to train the network.
 6. To convert the model to ONNX format, run “python3 onnx_export.py --model-dir=models/glassvsnoglasses”
-7. Press ctrl+D in the docker terminal to exit docker. Confirm your directory is in jetson-inference/python/training/classification. Then set the locations of net and dataset by running “NET = models/glassvsnoglasses” and “DATASET = data/glasses_no_glasses” 
+7. Press ctrl+D in the docker terminal to exit docker. Confirm your directory is in jetson-inference/python/training/classification. Then set the locations of net and dataset by running “NET=models/glassvsnoglasses” and “DATASET=data/glasses_no_glasses” 
 8. To classify an image as wearing glasses or not wearing glasses, type: imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/glasses/[image name].jpg result.jpg. Type the name of the image you want to test in the square brackets and delete the square brackets. 
